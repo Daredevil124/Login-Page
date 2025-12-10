@@ -1,0 +1,51 @@
+/* This wrapper creates the purple background and centers the card */
+.outerContainer {
+    min-height: 100vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+}
+
+.box {
+    border-radius: 30px;
+    border: none; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    max-width: 800px; 
+    width: 100%;
+}
+
+.title {
+    font-weight: 800; 
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+.btnPill {
+    border-radius: 50px !important; 
+    padding: 12px 30px !important;
+    font-weight: 600;
+    min-width: 200px;
+    min-height: 60px;
+}
+
+.purpleBtn {
+    background-color: #8c52ff !important;
+    border: none !important;
+    color: white !important;
+}
+
+.darkBtn {
+    background-color: #212529 !important; 
+    border: none !important;
+    color: white !important;
+}
