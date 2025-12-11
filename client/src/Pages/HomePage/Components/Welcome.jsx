@@ -2,7 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Button, Form, Card, Row, Col } from 'react-bootstrap';
 import styles from './Welcome.module.css'
+import {useNavigate} from 'react-router-dom';
 const Welcome=()=>{
+    const navigate=useNavigate();
     return(
        <div className={styles.outerContainer}>
             <Card className={`p-5 text-center ${styles.box}`}>
@@ -20,12 +22,11 @@ const Welcome=()=>{
                         account today and unlock a world of possibilities.
                     </p>
 
-                   
                     <div className="d-flex justify-content-center gap-3 mb-2">
-                        <Button className={`${styles.btnPill} ${styles.purpleBtn}`}>
+                        <Button className={`${styles.btnPill} ${styles.purpleBtn}`} onClick={()=>navigate('/sign-up')}>
                             Get Started
                         </Button>
-                        <Button className={`${styles.btnPill} ${styles.darkBtn}`}>
+                        <Button className={`${styles.btnPill} ${styles.darkBtn}`}onClick={()=>navigate('/login')}>
                             Sign In
                         </Button>
                     </div>

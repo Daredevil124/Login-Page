@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from '../HomePage/Components/Navbar/Navbar';
-import InnerCard from './Components/InnerCard/InnerCard';
-const login=()=>{
+import RegisterCard from './Components/RegisterCard';   
+const signup=()=>{
     return(
         <div>
             <Navbar/>
-            <InnerCard/>
+            <RegisterCard/>
         </div>
     )
 }
-export default login;
+export default signup;
