@@ -31,6 +31,7 @@ const register=()=>{
             setError("Username already Exists!");
             return;
         }
+        setError('');
         localStorage.setItem(formData.username,JSON.stringify(formData));
         setSuccess("Registration Successful!");
         setTimeout(()=>navigate('/login'),(2500));

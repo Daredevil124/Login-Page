@@ -8,6 +8,7 @@ const profile=()=>{
     const [isEditing, setIsEditing] = useState(false); 
     const [successMsg, setSuccessMsg] = useState('');
     const [error,setError]=useState('');
+    const [username,setUsername]=useState('');
     useEffect(()=>{
         const currentUser=localStorage.getItem('currentUser');
         if(!currentUser){
@@ -16,14 +17,17 @@ const profile=()=>{
         }
         const Data=localStorage.getItem(currentUser);
         if(Data){
-        setUser(JSON.parse(Data));}
+        setUser(JSON.parse(Data));
+        setUsername(JSON.parse(Data).username);
+    }
     },[navigate]);
   
     const handleChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
     };
     const handleSave=()=>{
-        if(!localStorage.getItem(user.username)){
+        console.log(username,user.username);
+        if(!localStorage.getItem(user.username)||user.username==username){
         localStorage.setItem(user.username,JSON.stringify(user));
         setIsEditing(false);
         setSuccessMsg("Profile updated successfully");

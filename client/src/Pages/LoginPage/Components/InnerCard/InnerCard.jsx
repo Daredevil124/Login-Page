@@ -19,6 +19,7 @@ const innerCard=()=>{
             setError("Username and Password does not match!");
             return;
         }
+        setError('');
         setSuccess("Login Successful!");
         localStorage.setItem('currentUser',email);
         setTimeout(()=>navigate('/profile'),2500);
