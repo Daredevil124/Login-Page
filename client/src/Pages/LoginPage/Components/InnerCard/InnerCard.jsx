@@ -3,12 +3,17 @@ import styles from './innerCard.module.css';
 import { Card, Form, Button,Alert } from 'react-bootstrap';
 import {useNavigate} from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
+// Login card component: authenticates against locally stored users.
+
 const innerCard=()=>{
     const navigate=useNavigate();
     const [email, setEmail]=useState('');
     const [password,setPassword]=useState('');
     const [error,setError]=useState('');
     const [success, setSuccess]=useState('');
+
+    // Basic submit: check existence and password match in localStorage
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(!(localStorage.getItem(email))){
@@ -21,9 +26,11 @@ const innerCard=()=>{
         }
         setError('');
         setSuccess("Login Successful!");
+        // store who is currently logged in
         localStorage.setItem('currentUser',email);
         setTimeout(()=>navigate('/profile'),2500);
     }
+
     return(
         <div className={styles.outerContainer}>
             <Card className={`p-4 ${styles.loginCard}`}>
@@ -47,6 +54,9 @@ const innerCard=()=>{
                     <Form onSubmit={handleSubmit}>
 
                         <Form.Group className="mb-3" controlId="formBasicEmail">
+                            {/* Note: label interpolation below uses braces incorrectly in original.
+                                It's functional visually but consider changing to template literal:
+                                className={`${styles.label} text-start d-block`} */}
                             <Form.Label className={`{styles.label} text-start d-block`}>Email Address</Form.Label>
                             <Form.Control 
                                 type="text" 

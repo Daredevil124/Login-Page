@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Button, Form, Card, Row, Col } from 'react-bootstrap';
 import styles from './Welcome.module.css'
 import {useNavigate} from 'react-router-dom';
+
+// Welcome/landing component with two main CTAs: Sign Up and Sign In
 const Welcome=()=>{
     const navigate=useNavigate();
     return(
@@ -22,6 +24,7 @@ const Welcome=()=>{
                         account today and unlock a world of possibilities.
                     </p>
 
+                    {/* Primary actions */}
                     <div className="d-flex justify-content-center gap-3 mb-2">
                         <Button className={`${styles.btnPill} ${styles.purpleBtn}`} onClick={()=>navigate('/sign-up')}>
                             Get Started

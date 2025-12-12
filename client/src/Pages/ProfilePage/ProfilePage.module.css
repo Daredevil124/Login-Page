@@ -1,3 +1,5 @@
+/* Profile page styles: container, card, and editable vs read-only inputs */
+
 .outerContainer {
     min-height: 100vh;
     width: 100%;
@@ -18,6 +20,7 @@
     background-color: white;
 }
 
+/* Icon shown at top of profile */
 .headerIcon {
     font-size: 3rem;
     color: #4a4a4a; 
@@ -43,7 +46,7 @@
     margin-bottom: 30px;
 }
 
-
+/* Labels and input states: read-only vs editable */
 .label {
     font-weight: 700;
     font-size: 0.75rem;
@@ -54,7 +57,7 @@
     display: block;
 }
 
-
+/* Read-only appearance for profile fields */
 .readOnlyInput {
     border-radius: 12px !important;
     padding: 12px 15px !important;
@@ -66,14 +69,14 @@
     transition: all 0.3s ease;
 }
 
-
+/* When editing, show focused / active input styles */
 .editableInput {
     border: 1px solid #8c52ff !important;
     background-color: #ffffff !important;
     box-shadow: 0 0 0 3px rgba(140, 82, 255, 0.1) !important;
 }
 
-
+/* Interest badge for non-edit state */
 .interestBadge {
     display: inline-block;
     background-color: #8c52ff;
@@ -84,6 +87,7 @@
     font-weight: 600;
 }
 
+/* Buttons: primary edit and password controls */
 .editBtn {
     background-color: #8c52ff !important;
     border: none !important;

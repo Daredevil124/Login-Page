@@ -1,9 +1,13 @@
+/* Navbar styling: dark bar with brand on left and action buttons on right */
+
 .navbar{
   background-color:black;
 }
 .navbar h1{
   margin-left: 20px;
 }
+
+/* Generic button baseline inside navbar */
 .navbar button{
   border-radius: 10px;
   min-width:90px;
@@ -13,6 +17,7 @@
   justify-content:flex-end !important;
 }
 
+/* Sign in button uses dark inline styling to blend with navbar */
 .signin{
   background-color: black;
   color:white;
@@ -20,6 +25,7 @@
   padding:10px;
  width:200px;
 }
+/* Sign up CTA highlighted in purple */
 .signup{
   background-color: #6870f9;
   border:0;

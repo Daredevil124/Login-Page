@@ -1,3 +1,4 @@
+/* Welcome landing styles — center box and CTA buttons */
 
 .outerContainer {
     min-height: 100vh;
@@ -29,7 +30,7 @@
     margin-bottom: 30px;
 }
 
-
+/* Pill-style CTA buttons */
 .btnPill {
     border-radius: 50px !important; 
     padding: 12px 30px !important;

@@ -3,8 +3,12 @@ import { Card, Form, Button,Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styles from './RegisterCard.module.css';
 import { useNavigate } from 'react-router-dom';
+
+// Registration card component: collects user info and stores it in localStorage.
 const register=()=>{
     const navigate=useNavigate();
+
+    // formData keeps all input values
     const [formData, setFormData] = useState({
         fullName: '',
         age: '',
@@ -13,27 +17,37 @@ const register=()=>{
         confirmPassword: '',
         interest: ''
     });
+
+    // Feedback messages
     const [success,setSuccess]=useState('');
     const [error,setError]=useState();
+
+    // Generic change handler for controlled inputs
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         });
     };
+
+    // Form submission: basic validation and simple persistence to localStorage
     const handleSubmit = (e) => {
         e.preventDefault();
+        // Simple password match validation
         if(formData.password!=formData.confirmPassword){
             setError("Password and Confirm Password do not match!!");
             return;
         }
+        // Prevent duplicate usernames
         if(localStorage.getItem(formData.username)){
             setError("Username already Exists!");
             return;
         }
         setError('');
+        // store user object under the username key
         localStorage.setItem(formData.username,JSON.stringify(formData));
         setSuccess("Registration Successful!");
+        // Redirect after a short delay so the user sees the success message
         setTimeout(()=>navigate('/login'),(2500));
         
     };

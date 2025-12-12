@@ -2,6 +2,8 @@ import React,{useState, useEffect} from 'react';
 import styles from './ProfilePage.module.css';
 import {useNavigate} from 'react-router-dom';
 import { Card, Form, Button, Row, Col, Alert } from 'react-bootstrap';
+
+// Profile page component: loads current user from localStorage and allows editing.
 const profile=()=>{
     const navigate = useNavigate();
     const [user, setUser] = useState(null); 
@@ -9,6 +11,8 @@ const profile=()=>{
     const [successMsg, setSuccessMsg] = useState('');
     const [error,setError]=useState('');
     const [username,setUsername]=useState('');
+
+    // On mount, ensure a user is logged in. If not, redirect to login.
     useEffect(()=>{
         const currentUser=localStorage.getItem('currentUser');
         if(!currentUser){
@@ -21,10 +25,14 @@ const profile=()=>{
         setUsername(JSON.parse(Data).username);
     }
     },[navigate]);
-  
+
+    // Generic input change handler for editing fields
     const handleChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
     };
+
+    // Save handler: writes updated user to localStorage.
+    // Prevents overwriting another user when username is changed to an existing one.
     const handleSave=()=>{
         console.log(username,user.username);
         if(!localStorage.getItem(user.username)||user.username==username){
@@ -34,15 +42,20 @@ const profile=()=>{
         setTimeout(()=>setSuccessMsg(''),3000);
         }
         else{
+            // Inform about username collision
             setTimeout(()=>setError('Username already Taken'),1500);
         }
     }
+
+    // Logout: clear currentUser key and navigate home after a short message
     const handleLogout=()=>{
         setSuccessMsg("Logout Successful!");
         localStorage.removeItem('currentUser');
         setTimeout(()=>navigate('/'),(2500));
     }
-    if (!user) return null;
+
+    if (!user) return null; // Avoid rendering until user is loaded
+
     return(
         <div className={styles.outerContainer}>
             <Card className={`p-4 ${styles.profileCard}`}>

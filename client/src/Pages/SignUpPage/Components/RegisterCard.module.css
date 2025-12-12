@@ -1,4 +1,6 @@
+/* Styles for the registration card (signup) — layout, inputs and buttons */
 
+/* Page wrapper providing the gradient background and center alignment */
 .outerContainer {
     min-height: 100vh;
     width: 100%;
@@ -9,6 +11,7 @@
     padding: 20px;
 }
 
+/* Card styling: rounded corners and shadow to elevate the form */
 .registerCard {
     border-radius: 25px;
     border: none;
@@ -18,6 +21,7 @@
     overflow: hidden;
 }
 
+/* Brand and heading styles */
 .brandTitle {
     font-weight: 800;
     color: #333;
@@ -37,6 +41,7 @@
     margin-bottom: 25px;
 }
 
+/* Form label styling */
 .label {
     font-weight: 700;
     font-size: 0.9rem;
@@ -45,6 +50,7 @@
     display: block;
 }
 
+/* Input base styles — used both for input and selects */
 .customInput {
     border-radius: 12px !important;
     padding: 12px 15px !important;
@@ -54,6 +60,7 @@
     color: #555;
 }
 
+/* Custom select arrow styling for cross-browser consistency */
 select.customInput {
     color: #555;
     appearance: none; 
@@ -63,10 +70,13 @@ select.customInput {
     background-size: 16px 12px;
 }
 
+/* Focus state for input elements */
 .customInput:focus {
     box-shadow: 0 0 0 3px rgba(140, 82, 255, 0.2) !important;
     border-color: #8c52ff !important;
 }
+
+/* Primary call-to-action button */
 .purpleBtn {
     background-color: #8c52ff !important;
     border: none !important;
@@ -85,7 +95,7 @@ select.customInput {
     transform: translateY(-2px);
 }
 
-
+/* Link to sign in for existing users */
 .signInLink {
     color: #8c52ff;
     text-decoration: none;
