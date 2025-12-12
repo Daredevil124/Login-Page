@@ -9,7 +9,8 @@ const innerCard=()=>{
     const [password,setPassword]=useState('');
     const [error,setError]=useState('');
     const [success, setSuccess]=useState('');
-    const handleSubmit=()=>{
+    const handleSubmit=(e)=>{
+        e.preventDefault();
         if(!(localStorage.getItem(email))){
             setError("Email does not exists!");
             return;
@@ -19,6 +20,8 @@ const innerCard=()=>{
             return;
         }
         setSuccess("Login Successful!");
+        localStorage.setItem('currentUser',email);
+        setTimeout(()=>navigate('/profile'),2500);
     }
     return(
         <div className={styles.outerContainer}>
@@ -45,7 +48,7 @@ const innerCard=()=>{
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label className={`{styles.label} text-start d-block`}>Email Address</Form.Label>
                             <Form.Control 
-                                type="email" 
+                                type="text" 
                                 placeholder="you@example.com" 
                                 className={styles.customInput}
                                 value={email}

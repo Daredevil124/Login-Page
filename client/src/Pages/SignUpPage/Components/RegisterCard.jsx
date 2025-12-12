@@ -33,7 +33,7 @@ const register=()=>{
         }
         localStorage.setItem(formData.username,JSON.stringify(formData));
         setSuccess("Registration Successful!");
-        navigate('/login');
+        setTimeout(()=>navigate('/login'),(2500));
         
     };
     return(
@@ -138,11 +138,11 @@ const register=()=>{
                                 required
                             >
                                 <option value="">Select your interest</option>
-                                <option value="frontend">Frontend Development</option>
-                                <option value="backend">Backend Development</option>
-                                <option value="fullstack">Full Stack Development</option>
-                                <option value="devops">DevOps</option>
-                                <option value="ai">AI / Machine Learning</option>
+                                <option value="Frontend Development">Frontend Development</option>
+                                <option value="Backend Development">Backend Development</option>
+                                <option value="Full Stack Development">Full Stack Development</option>
+                                <option value="DevOps">DevOps</option>
+                                <option value="AI / Machine Learning">AI / Machine Learning</option>
                             </Form.Select>
                         </Form.Group>
 

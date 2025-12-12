@@ -6,6 +6,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage.jsx';
 import LoginPage from './Pages/LoginPage/LoginPage.jsx';
 import SignUpPage from './Pages/SignUpPage/SignUpPage.jsx';
+import ProfilePage from './Pages/ProfilePage/ProfilePage.jsx';
 function App() {
   
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HomePage/>}/>
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="sign-up" element={<SignUpPage/>}/>
+        <Route path="profile" element={<ProfilePage/>}/>
       </Routes>
     </div>
   )

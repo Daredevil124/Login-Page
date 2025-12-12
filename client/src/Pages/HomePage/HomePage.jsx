@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Welcome from './Components/Welcome.jsx';
-import styles from './HomePage.module.css';
+import Welcome from './Components/Welcome/Welcome.jsx';
 import Navbar from './Components/Navbar/Navbar.jsx';
 const home=()=>{
     return(

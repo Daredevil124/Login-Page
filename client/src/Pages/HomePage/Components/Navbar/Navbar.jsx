@@ -6,7 +6,7 @@ const Navbar=()=>{
     return(
         <div>
       <nav className={`${styles.navbar} d-flex align-items-center`}>
-      <h1 style={{"textAlign":"left","color":"white"}}>NexusHub</h1>
+      <h1 onClick={()=>navigate('/')} style={{"textAlign":"left","color":"white","cursor":"pointer"}}>NexusHub</h1>
       <div className="ms-auto d-flex gap-2">
       <button className={styles.signin} onClick={()=>navigate('/login')}>Sign In</button>
       <button className={styles.signup} onClick={()=>navigate('/sign-up')}>Get Started</button>

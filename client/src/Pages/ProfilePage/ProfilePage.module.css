@@ -1,0 +1,115 @@
+.outerContainer {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profileCard {
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 700px; 
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.headerIcon {
+    font-size: 3rem;
+    color: #4a4a4a; 
+    margin-bottom: 10px;
+}
+
+.brandTitle {
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.pageTitle {
+    font-weight: 600;
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.subText {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+
+.label {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+.readOnlyInput {
+    border-radius: 12px !important;
+    padding: 12px 15px !important;
+    border: 1px solid #f0f0f0 !important;
+    background-color: #f8f9fa !important; 
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+.editableInput {
+    border: 1px solid #8c52ff !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 3px rgba(140, 82, 255, 0.1) !important;
+}
+
+
+.interestBadge {
+    display: inline-block;
+    background-color: #8c52ff;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.editBtn {
+    background-color: #8c52ff !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 12px !important;
+    padding: 10px 30px !important;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: all 0.2s ease;
+}
+
+.editBtn:hover {
+    background-color: #6a32d1 !important;
+    transform: translateY(-2px);
+}
+
+.passwordBtn {
+    background-color: transparent !important;
+    border: 2px solid #8c52ff !important; 
+    color: #8c52ff !important;
+    border-radius: 12px !important;
+    padding: 10px 20px !important;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.passwordBtn:hover {
+    background-color: #f3ebff !important;
+}
